@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
   Future openDialog() => showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Text("name the groupe"),
+          title: Text("name the team"),
           content: TextField(
             autofocus: true,
             decoration: InputDecoration(hintText: "tape the goupe name"),
