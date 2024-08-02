@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ntriniw__app/pages/home.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -16,38 +18,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Groupe chat"),
-        ),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.yellow,
-          child: const Icon(Icons.add),
-          onPressed: () {
-            openDialog();
-          },
-        ),
-      ),
-    );
-  }
-
-  Future openDialog() => showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: Text("name the team"),
-          content: TextField(
-            autofocus: true,
-            decoration: InputDecoration(hintText: "tape the goupe name"),
-          ),
-          actions: [
-            TextButton(
-              child: Text("submit"),
-              onPressed: submit,
-            ),
-          ],
-        ),
-      );
-  void submit() {
-    Navigator.of(context).pop();
+       home: HomnePage());
   }
 }
+
